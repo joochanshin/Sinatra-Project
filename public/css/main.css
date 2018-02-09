@@ -1,0 +1,28 @@
+.navbar {
+  border: 10px solid blue; }
+
+.bg {
+  background-color: violet;
+  border: 2px green; }
+
+.wrapper {
+  background-color: #036;
+  text-align: center;
+  height: 400px; }
+
+.title {
+  font-size: 50px;
+  color: white; }
+
+.form-control {
+  height: 30px;
+  width: 200px; }
+
+#box {
+  width: 60px;
+  height: 10px; }
+
+.home {
+  border: 2px solid green; }
+
+/*# sourceMappingURL=main.css.map */
