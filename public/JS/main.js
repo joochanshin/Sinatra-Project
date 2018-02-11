@@ -1,17 +1,13 @@
-function previewFile() {
-    var preview = document.querySelector('img'); /
-    var file = document.querySelector('input[type=file]').files[0];
-    var reader = new FileReader();
+$(function () {
+    $(":file").change(function () {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = imageIsLoaded;
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
 
-    reader.onloadend = function () {
-        preview.src = reader.result;
-    }
-
-    if (file) {
-        reader.readAsDataURL(file); 
-    } else {
-        preview.src = "";
-    }
-}
-
-previewFile();
+function imageIsLoaded(e) {
+    $('#myImg').attr('src', e.target.result);
+};
